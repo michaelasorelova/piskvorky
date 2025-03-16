@@ -1,7 +1,32 @@
 * {
     box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    background-image: linear-gradient(#615dad, #ffc8da);
+}
+
+.piskvorky {
+    background-color: #283e50;
 }
 
 h1 {
     font-family: "Lobster", serif;
+}
+
+.piskvorky__tlacitko--pravidla {
+    background-color: #1fcca4;
+}
+
+.piskvorky__tlacitko--pravidla:hover {
+    background-color: #1cbb96;
+}
+
+.piskvorky__tlacitko--zacit-hrat {
+    background-color: #0197f6;
+}
+
+.piskvorky__tlacitko--zacit-hrat:hover {
+    background-color: #0090e9;
 }
