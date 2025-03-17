@@ -1,34 +1,45 @@
+/* Základní CSS */
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     color: #fff;
-    margin: 0;
 }
 
-html {
-    background: linear-gradient(#615dad, #ffc8da);
+html, body {
     height: 100%;
+}
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background: linear-gradient(#615dad, #ffc8da);
 }
 
+/* Sekce Piškvorky */
+
 .piskvorky {
-    background-color: #283e50;
     max-width: 400px;
+    background-color: #283e50;
+    border-radius: 2% 2% 0 0;
     text-align: center;
-    border-radius: 3% 3% 0 0;
 }
+
+/* Sekce Piškvorky – Obrázek */
 
 img {
     width: 100%;
-    border-radius: 3% 3% 0 0;
+    border-radius: 2% 2% 0 0;
 }
 
+/* Sekce Piškvorky – Info */
+
 h1 {
+    margin-bottom: 16px;
     font-family: "Lobster", serif;
     font-size: 32px;
-    margin-bottom: 16px;
 }
 
 p {
@@ -37,25 +48,25 @@ p {
 }
 
 .piskvorky__info {
-    padding: 0 16px;
     margin: 32px 0;
+    padding: 0 16px;
 }
 
-/* Piškvorky rozcestník */
+/* Sekce Piškvorky – Rozcestník */
 
 .piskvorky__tlacitko {
-    display: inline-block;
     width: 100%;
-    border: none;
-    text-decoration: none;
-    font-size: 16px;
     padding: 16px 32px;
+    display: inline-block;
+    border: none;
+    font-size: 16px;
+    text-decoration: none;
     cursor: pointer;
 }
 
 .piskvorky__tlacitko--pravidla {
+    margin-bottom: 2px;
     background-color: #1fcca4;
-    margin-bottom: 3px;
 }
 
 .piskvorky__tlacitko--pravidla:hover {
