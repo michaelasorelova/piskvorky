@@ -28,6 +28,10 @@ body {
 /* Sekce Piškvorky */
 
 .piskvorky {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 400px;
     max-width: 80vmin;
     background-color: #283e50;
     border-radius: 2% 2% 0 0;
@@ -55,7 +59,6 @@ p {
 }
 
 .piskvorky__info {
-    margin: 2rem 0;
     padding: 0 1rem;
 }
 
@@ -82,7 +85,8 @@ p {
     background-color: #1fcca4;
 }
 
-.piskvorky__tlacitko--pravidla:hover {
+.piskvorky__tlacitko--pravidla:hover,
+.piskvorky__tlacitko--pravidla:focus {
     background-color: #1cbb96;
 }
 
@@ -90,7 +94,8 @@ p {
     background-color: #0197f6;
 }
 
-.piskvorky__tlacitko--zacit-hrat:hover {
+.piskvorky__tlacitko--zacit-hrat:hover,
+.piskvorky__tlacitko--zacit-hrat:focus {
     background-color: #0090e9;
 }
 
@@ -157,7 +162,8 @@ p {
     background-color: #1fcca4;
 }
 
-.hra__ikona--home:hover {
+.hra__ikona--home:hover,
+.hra__ikona--home:focus {
     background-color: #1cbb96;
 }
 
@@ -165,7 +171,8 @@ p {
     background-color: #0197f6;
 }
 
-.hra__ikona--restart:hover {
+.hra__ikona--restart:hover,
+.hra__ikona--home:focus {
     background-color: #0090e9;
 }
 
