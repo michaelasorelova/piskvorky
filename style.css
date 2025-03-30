@@ -25,6 +25,24 @@ body {
     background: linear-gradient(#615dad, #ffc8da);
 }
 
+.tlacitko--zelena {
+    background-color: #1fcca4;
+}
+
+.tlacitko--zelena:hover,
+.tlacitko--zelena:focus {
+    background-color: #1cbb96;
+}
+
+.tlacitko--modra {
+    background-color: #0197f6;
+}
+
+.tlacitko--modra:hover,
+.tlacitko--modra:focus {
+    background-color: #0090e9;
+}
+
 /* Sekce Piškvorky */
 
 .piskvorky {
@@ -79,24 +97,6 @@ p {
     font-size: 1rem;
     text-decoration: none;
     cursor: pointer;
-}
-
-.piskvorky__tlacitko--pravidla {
-    background-color: #1fcca4;
-}
-
-.piskvorky__tlacitko--pravidla:hover,
-.piskvorky__tlacitko--pravidla:focus {
-    background-color: #1cbb96;
-}
-
-.piskvorky__tlacitko--zacit-hrat {
-    background-color: #0197f6;
-}
-
-.piskvorky__tlacitko--zacit-hrat:hover,
-.piskvorky__tlacitko--zacit-hrat:focus {
-    background-color: #0090e9;
 }
 
 /* Sekce hra */
@@ -156,24 +156,6 @@ p {
     width: 40px;
     height: 40px;
     border-radius: 8%;
-}
-
-.hra__ikona--home {
-    background-color: #1fcca4;
-}
-
-.hra__ikona--home:hover,
-.hra__ikona--home:focus {
-    background-color: #1cbb96;
-}
-
-.hra__ikona--restart {
-    background-color: #0197f6;
-}
-
-.hra__ikona--restart:hover,
-.hra__ikona--home:focus {
-    background-color: #0090e9;
 }
 
 /* Sekce Hra – Mřížka */
