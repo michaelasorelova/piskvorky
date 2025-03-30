@@ -28,7 +28,7 @@ body {
 /* Sekce Piškvorky */
 
 .piskvorky {
-    max-width: 400px;
+    max-width: 80vmin;
     background-color: #283e50;
     border-radius: 2% 2% 0 0;
     text-align: center;
@@ -36,7 +36,7 @@ body {
 
 /* Sekce Piškvorky – Obrázek */
 
-img {
+.piskvorky__obrazek img {
     width: 100%;
     border-radius: 2% 2% 0 0;
 }
@@ -61,6 +61,12 @@ p {
 
 /* Sekce Piškvorky – Rozcestník */
 
+.piskvorky__rozcestnik {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
 .piskvorky__tlacitko {
     width: 100%;
     padding: 1rem 2rem;
@@ -73,7 +79,6 @@ p {
 }
 
 .piskvorky__tlacitko--pravidla {
-    margin-bottom: 2px;
     background-color: #1fcca4;
 }
 
@@ -87,4 +92,96 @@ p {
 
 .piskvorky__tlacitko--zacit-hrat:hover {
     background-color: #0090e9;
+}
+
+/* Sekce hra */
+
+.hra {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 80vmin;
+}
+
+.hra__nadpis {
+    margin-bottom: 1rem;
+    font-family: "Lobster", serif;
+    font-size: 4rem;
+    text-align: center;
+}
+
+/* Sekce Hra – Info */
+
+.hra__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hra__hrac {
+    display: flex;
+}
+
+.hra__checkbox {
+    display: none;
+}
+
+.hra__label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hra__label p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hra__ovladani {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.hra__ikona {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8%;
+}
+
+.hra__ikona--home {
+    background-color: #1fcca4;
+}
+
+.hra__ikona--home:hover {
+    background-color: #1cbb96;
+}
+
+.hra__ikona--restart {
+    background-color: #0197f6;
+}
+
+.hra__ikona--restart:hover {
+    background-color: #0090e9;
+}
+
+/* Sekce Hra – Mřížka */
+
+.hra__mrizka {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    border: 2px solid #000;
+    opacity: 0.5;
+}
+
+.hra__policko {
+    
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    cursor: pointer;
 }
