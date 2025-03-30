@@ -186,9 +186,13 @@ p {
 }
 
 .hra__policko {
-    
     width: 40px;
     height: 40px;
     border: 2px solid #000;
     cursor: pointer;
+}
+
+.hra__policko:hover,
+.hra__policko:focus {
+    background-color: #fff;
 }
