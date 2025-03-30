@@ -105,7 +105,9 @@ p {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    max-width: 80vmin;
+    width: 100%;
+    max-width: 80vw;
+    max-height: 80vh;
 }
 
 .hra__nadpis {
@@ -168,8 +170,7 @@ p {
 }
 
 .hra__policko {
-    width: 40px;
-    height: 40px;
+    aspect-ratio: 1;
     border: 2px solid #000;
     cursor: pointer;
 }
