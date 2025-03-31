@@ -14,16 +14,17 @@ html {
     color: #fff;
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     background: linear-gradient(#615dad, #ffc8da);
+    background-attachment: fixed;
+    background-size: cover;
 }
+
+/* Tlačítka */
 
 .tlacitko--zelena {
     background-color: #1fcca4;
@@ -104,10 +105,10 @@ p {
 .hra {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 0.5rem;
-    width: 100%;
-    max-width: 80vw;
-    max-height: 80vh;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .hra__nadpis {
@@ -165,13 +166,17 @@ p {
 .hra__mrizka {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    border: 2px solid #000;
+    grid-template-rows: repeat(10, 1fr);
+    width: 100%;
+    flex-grow: 1;
+    border: 1px solid #000;
     opacity: 0.5;
+    gap: 0px;
 }
 
 .hra__policko {
     aspect-ratio: 1;
-    border: 2px solid #000;
+    border: 1px solid #000;
     cursor: pointer;
 }
 
