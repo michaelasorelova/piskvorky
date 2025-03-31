@@ -18,7 +18,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     background: linear-gradient(#615dad, #ffc8da);
     background-attachment: fixed;
     background-size: cover;
@@ -109,10 +110,12 @@ p {
     gap: 0.5rem;
     width: 100%;
     max-width: 80vmin;
+    padding-bottom: 2rem;
 }
 
 .hra__nadpis {
     margin-bottom: 1rem;
+    padding-top: 2rem;
     font-family: "Lobster", serif;
     font-size: 4rem;
     text-align: center;
@@ -167,7 +170,6 @@ p {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
-    flex-grow: 1;
     border: 1px solid #000;
     opacity: 0.5;
     gap: 0px;
