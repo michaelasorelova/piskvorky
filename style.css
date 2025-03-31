@@ -11,14 +11,12 @@ html {
 * {
     margin: 0;
     padding: 0;
-    color: #fff;
 }
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     min-height: 100vh;
     background: linear-gradient(#615dad, #ffc8da);
     background-attachment: fixed;
@@ -28,6 +26,7 @@ body {
 /* Tlačítka */
 
 .tlacitko--zelena {
+    color: #fff;
     background-color: #1fcca4;
 }
 
@@ -37,6 +36,7 @@ body {
 }
 
 .tlacitko--modra {
+    color: #fff;
     background-color: #0197f6;
 }
 
@@ -55,6 +55,7 @@ body {
     max-width: 80vmin;
     background-color: #283e50;
     border-radius: 2% 2% 0 0;
+    color: #fff;
     text-align: center;
 }
 
@@ -68,7 +69,6 @@ body {
 /* Sekce Piškvorky – Info */
 
 h1 {
-    margin-bottom: 1rem;
     font-family: "Lobster", serif;
     font-size: 2rem;
 }
@@ -79,6 +79,9 @@ p {
 }
 
 .piskvorky__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     padding: 0 1rem;
 }
 
@@ -87,13 +90,13 @@ p {
 .piskvorky__rozcestnik {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 1px;
 }
 
 .piskvorky__tlacitko {
     width: 100%;
     padding: 1rem 2rem;
-    display: inline-block;
+    display: block;
     border: none;
     font-family: sans-serif;
     font-size: 1rem;
@@ -107,15 +110,14 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 2rem;
+    margin: 2rem;
     width: 100%;
     max-width: 80vmin;
-    padding-bottom: 2rem;
+    color: #fff;
 }
 
 .hra__nadpis {
-    margin-bottom: 1rem;
-    padding-top: 2rem;
     font-family: "Lobster", serif;
     font-size: 4rem;
     text-align: center;
@@ -172,7 +174,6 @@ p {
     grid-template-rows: repeat(10, 1fr);
     border: 1px solid #000;
     opacity: 0.5;
-    gap: 0px;
 }
 
 .hra__policko {
