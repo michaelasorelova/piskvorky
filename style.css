@@ -137,12 +137,6 @@ p {
     cursor: pointer;
 }
 
-#cross {
-    background-image: url("img/cross.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 .game__player p {
     font-size: 1.2rem;
     font-weight: 700;
@@ -185,35 +179,35 @@ p {
     background-color: #f5f5f5;
 }
 
-.board__field--circle {
+.game__square--circle {
     background-image: url("img/circle-black.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 80% 80%;
 }
 
-.board__field--cross {
+.game__square--cross {
     background-image: url("img/cross-black.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 80% 80%;
 }
 
-.game__symbol {
+.player__symbol {
     width: 50px;
     height: 50px;
     background-size: cover;
-  }
+}
   
-.circle {
-    background-image: url('img/circle.svg');
+.player__symbol--circle {
+    background-image: url('img/circle-white.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 80% 80%;
 }
 
-.cross {
-    background-image: url('img/cross.svg');
+.player__symbol--cross {
+    background-image: url('img/cross-white.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 80% 80%;
