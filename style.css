@@ -23,31 +23,36 @@ body {
     background-size: cover;
 }
 
+p {
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
 /* Tlačítka */
 
-.tlacitko--zelena {
+.button--green {
     color: #fff;
     background-color: #1fcca4;
 }
 
-.tlacitko--zelena:hover,
-.tlacitko--zelena:focus {
+.button--green:hover,
+.button--green:focus {
     background-color: #1cbb96;
 }
 
-.tlacitko--modra {
+.button--blue {
     color: #fff;
     background-color: #0197f6;
 }
 
-.tlacitko--modra:hover,
-.tlacitko--modra:focus {
+.button--blue:hover,
+.button--blue:focus {
     background-color: #0090e9;
 }
 
 /* Sekce Piškvorky */
 
-.piskvorky {
+.tic-tac-toe {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -61,24 +66,19 @@ body {
 
 /* Sekce Piškvorky – Obrázek */
 
-.piskvorky__obrazek img {
+.tic-tac-toe__image {
     width: 100%;
     border-radius: 2% 2% 0 0;
 }
 
 /* Sekce Piškvorky – Info */
 
-h1 {
+.tic-tac-toe__title {
     font-family: "Lobster", serif;
     font-size: 2rem;
 }
 
-p {
-    font-family: sans-serif;
-    font-size: 1rem;
-}
-
-.piskvorky__info {
+.tic-tac-toe__info {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -87,13 +87,13 @@ p {
 
 /* Sekce Piškvorky – Rozcestník */
 
-.piskvorky__rozcestnik {
+.tic-tac-toe__menu {
     display: flex;
     flex-direction: column;
     gap: 1px;
 }
 
-.piskvorky__tlacitko {
+.tic-tac-toe__button {
     width: 100%;
     padding: 1rem 2rem;
     display: block;
@@ -106,7 +106,7 @@ p {
 
 /* Sekce hra */
 
-.hra {
+.game {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,7 +117,7 @@ p {
     color: #fff;
 }
 
-.hra__nadpis {
+.game__title {
     font-family: "Lobster", serif;
     font-size: 4rem;
     text-align: center;
@@ -125,39 +125,36 @@ p {
 
 /* Sekce Hra – Info */
 
-.hra__info {
+.game__info {
     display: flex;
     justify-content: space-between;
 }
 
-.hra__hrac {
-    display: flex;
-}
-
-.hra__checkbox {
-    display: none;
-}
-
-.hra__label {
+.game__player {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    justify-content: center;
     cursor: pointer;
 }
 
-.hra__label p {
+#cross {
+    background-image: url("img/cross.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.game__player p {
     font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.hra__ovladani {
+.game__menu {
     display: flex;
     gap: 0.5rem;
 }
 
-.hra__ikona {
+.game__icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -168,21 +165,56 @@ p {
 
 /* Sekce Hra – Mřížka */
 
-.hra__mrizka {
+.game__board {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
-    border: 1px solid #000;
-    opacity: 0.5;
+    border: 2px solid #696969;
+    background: #dcdcdc;
 }
 
-.hra__policko {
+.game__square {
     aspect-ratio: 1;
-    border: 1px solid #000;
+    border: 2px solid #696969;
+    background: none;
     cursor: pointer;
 }
 
-.hra__policko:hover,
-.hra__policko:focus {
-    background-color: #fff;
+.game__square:hover,
+.game__square:focus {
+    background-color: #f5f5f5;
+}
+
+.board__field--circle {
+    background-image: url("img/circle-black.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+}
+
+.board__field--cross {
+    background-image: url("img/cross-black.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+}
+
+.game__symbol {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+  }
+  
+.circle {
+    background-image: url('img/circle.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+}
+
+.cross {
+    background-image: url('img/cross.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
 }
