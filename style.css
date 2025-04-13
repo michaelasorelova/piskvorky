@@ -212,3 +212,20 @@ p {
     background-repeat: no-repeat;
     background-size: 80% 80%;
 }
+
+/* Animace */
+
+@keyframes clickZoom {
+    0% {
+      transform: scale(0.7);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+.game__square--circle,
+.game__square--cross {
+animation: clickZoom 0.15s ease forwards;
+transform-origin: center;
+}
