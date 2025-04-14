@@ -222,7 +222,7 @@ p {
     100% {
       transform: scale(1);
     }
-  }
+}
   
 .game__square--circle,
 .game__square--cross {
