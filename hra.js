@@ -26,22 +26,25 @@ playerSymbol.classList.add('player__symbol--circle');
 
 const squares = document.querySelectorAll('.game__square');
 squares.forEach((square) => {
-  square.addEventListener('click', (event) => {
-    if (event.target.disabled) return;
+  square.addEventListener('click', () => {
+    if (square.disabled) return;
+
+    const symbol = square.querySelector('.game__symbol');
+    if (!symbol) return;
 
     if (currentPlayer === 'circle') {
-      event.target.classList.add('game__square--circle');
-      currentPlayer = 'cross'
+      symbol.classList.add('game__symbol--circle');
+      currentPlayer = 'cross';
       playerSymbol.classList.remove('player__symbol--circle');
       playerSymbol.classList.add('player__symbol--cross');
     } else {
-      event.target.classList.add('game__square--cross');
+      symbol.classList.add('game__symbol--cross');
       currentPlayer = 'circle';
       playerSymbol.classList.remove('player__symbol--cross');
       playerSymbol.classList.add('player__symbol--circle');
     }
 
-    event.target.disabled = true;
+    square.disabled = true;
   });
 });
 

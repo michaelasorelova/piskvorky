@@ -179,18 +179,21 @@ p {
     background-color: #f5f5f5;
 }
 
-.game__square--circle {
-    background-image: url("img/circle-black.svg");
+.game__symbol {
+    display: block;
+    width: 100%;
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 80% 80%;
 }
 
-.game__square--cross {
+.game__symbol--circle {
+    background-image: url("img/circle-black.svg");
+}
+
+.game__symbol--cross {
     background-image: url("img/cross-black.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 80% 80%;
 }
 
 .player__symbol {
@@ -224,8 +227,8 @@ p {
     }
 }
   
-.game__square--circle,
-.game__square--cross {
+.game__symbol--circle,
+.game__symbol--cross {
 animation: clickZoom 0.15s ease forwards;
 transform-origin: center;
 }
