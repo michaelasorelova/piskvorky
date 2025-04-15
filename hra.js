@@ -1,6 +1,6 @@
 const board = document.getElementById('game-board');
 let currentPlayer = 'circle';
-const gameSymbol = document.querySelector('.player__symbol');
+const playerSymbol = document.querySelector('.player__symbol');
 const gameIconRestart = document.querySelector('.game__icon--restart');
 
 // Vytváření tlačítek
@@ -9,12 +9,17 @@ for (let i = 1; i <= 100; i++) {
   const button = document.createElement('button');
   button.className = 'game__square';
   button.id = `square-${i}`;
+
+  const symbolWrapper = document.createElement('span');
+  symbolWrapper.className = 'game__symbol';
+
+  button.appendChild(symbolWrapper);
   board.appendChild(button);
 }
 
 // Nastavení počátečního symbolu
 
-gameSymbol.classList.add('player__symbol--circle');
+playerSymbol.classList.add('player__symbol--circle');
 
 
 // Nastavení posluchače událostí pro kliknutí na tlačítka
@@ -27,13 +32,13 @@ squares.forEach((square) => {
     if (currentPlayer === 'circle') {
       event.target.classList.add('game__square--circle');
       currentPlayer = 'cross'
-      gameSymbol.classList.remove('player__symbol--circle');
-      gameSymbol.classList.add('player__symbol--cross');
+      playerSymbol.classList.remove('player__symbol--circle');
+      playerSymbol.classList.add('player__symbol--cross');
     } else {
       event.target.classList.add('game__square--cross');
       currentPlayer = 'circle';
-      gameSymbol.classList.remove('player__symbol--cross');
-      gameSymbol.classList.add('player__symbol--circle');
+      playerSymbol.classList.remove('player__symbol--cross');
+      playerSymbol.classList.add('player__symbol--circle');
     }
 
     event.target.disabled = true;
