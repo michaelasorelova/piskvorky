@@ -8,7 +8,7 @@ const gameIconRestart = document.querySelector('.game__icon--restart');
 // Herní pole
 const gameBoard = new Array(100).fill('_');
 
-// Vytváření tlačítek
+// Tlačítka
 for (let i = 1; i <= 100; i++) {
   const button = document.createElement('button');
   button.className = 'game__square';
@@ -21,10 +21,10 @@ for (let i = 1; i <= 100; i++) {
   board.appendChild(button);
 }
 
-// Nastavení počátečního symbolu
+// Počáteční symbol
 playerSymbol.classList.add('player__symbol--circle');
 
-// Nastavení posluchače událostí pro kliknutí na tlačítka
+// Posluchač událostí pro kliknutí na tlačítka
 const squares = document.querySelectorAll('.game__square');
 squares.forEach((square, index) => {
   square.addEventListener('click', () => {
@@ -33,7 +33,7 @@ squares.forEach((square, index) => {
     const symbol = square.querySelector('.game__symbol');
     if (!symbol) return;
 
-    // Přidání symbolu podle aktuálního hráče
+    // Symbol podle aktuálního hráče
     if (currentPlayer === 'circle') {
       symbol.classList.add('game__symbol--circle');
       gameBoard[index] = 'o';
@@ -48,10 +48,10 @@ squares.forEach((square, index) => {
       playerSymbol.classList.add('player__symbol--circle');
     }
 
-    // Zablokování kliknutí na už obsazené políčko
+    // Blokovat kliknutí na už obsazené políčko
     square.disabled = true;
 
-    // Zkontroluj vítěze po každém tahu
+    // Zkontrolovat vítěze po každém tahu
     const winner = findWinner(gameBoard);
     if (winner === 'o') {
       setTimeout(() => {
@@ -72,7 +72,7 @@ squares.forEach((square, index) => {
   })
 });
 
-// Obnovení hry po restartu
+// Obnovit hru po restartu
 gameIconRestart.addEventListener('click', (event) => {
   const confirmed = confirm('Opravdu chceš začít znovu?');
   if (!confirmed) {
