@@ -82,8 +82,9 @@ gameIconRestart.addEventListener('click', (event) => {
 });
 
 gameIconHome.addEventListener('click', (event) => {
+  event.preventDefault();
   const confirmed = confirm('Opravdu chceš odejít na hlavní stránku?');
-  if (!confirmed) {
-    event.preventDefault();
+  if (confirmed) {
+    window.location.href = gameIconHome.getAttribute('href');
   }
 });
