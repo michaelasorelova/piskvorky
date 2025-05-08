@@ -4,6 +4,7 @@ const board = document.getElementById('game-board');
 let currentPlayer = 'circle';
 const playerSymbol = document.querySelector('.player__symbol');
 const gameIconRestart = document.querySelector('.game__icon--restart');
+const gameIconHome = document.querySelector('.game__icon--home');
 
 // Herní pole
 const gameBoard = new Array(100).fill('_');
@@ -72,9 +73,16 @@ squares.forEach((square, index) => {
   })
 });
 
-// Obnovit hru po restartu
+// Potvrzovací dialogy
 gameIconRestart.addEventListener('click', (event) => {
   const confirmed = confirm('Opravdu chceš začít znovu?');
+  if (!confirmed) {
+    event.preventDefault();
+  }
+});
+
+gameIconHome.addEventListener('click', (event) => {
+  const confirmed = confirm('Opravdu chceš odejít na hlavní stránku?');
   if (!confirmed) {
     event.preventDefault();
   }
