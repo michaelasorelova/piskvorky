@@ -59,6 +59,24 @@ squares.forEach((square, index) => {
         alert('Vyhrálo kolečko!');
         location.reload();
       }, 1000);
+    } else if (currentPlayer === 'cross') {
+      // Volat API při každém tahu křížku
+      (async () => {
+        const response = await fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json',
+          },
+          body: JSON.stringify({
+            board: gameBoard,
+            player: 'x',
+          }),
+        });
+        const data = await response.json();
+        const { x, y } = data.position;
+        const field = squares[x + y * 10];
+        field.click();
+      })();
     } else if (winner === 'x') {
       setTimeout(() => {
         alert('Vyhrál křížek!');
