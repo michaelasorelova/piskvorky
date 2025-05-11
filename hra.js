@@ -74,8 +74,8 @@ squares.forEach((square, index) => {
         });
         const data = await response.json();
         const { x, y } = data.position;
-        const field = squares[x + y * 10];
-        field.click();
+        const index = squares[x + y * 10];
+        index.click();
       })();
     } else if (winner === 'x') {
       setTimeout(() => {
